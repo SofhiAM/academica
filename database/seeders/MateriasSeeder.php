@@ -17,33 +17,33 @@ class MateriasSeeder extends Seeder
      */
     public function run()
     { 
-       $datos = [
-        [
-            'codmateria' => '01',
-            'nommateria' => 'Matematicas',
-            'cremateria' => '4'
-        ],
-        [
-            'codmateria' => '02',
-            'nommateria' => 'Ingles',
-            'cremateria' => '2'
-        ],
-        [
-            'codmateria' => '03',
-            'nommateria' => 'Programacion',
-            'cremateria' => '5'
-        ],
-        [
-            'codmateria' => '04',
-            'nommateria' => 'Base de Datos',
-            'cremateria' => '3'
-        ],
-        [
-            'codmateria' => '05',
-            'nommateria' => 'Redes',
-            'cremateria' => '6'
-        ]
-        ];
-        DB::table('materias')->insert($datos);
+        $datos = [
+            [
+                'codmateria' => '01',
+                'nommateria' => 'Matematicas',
+                'cremateria' => '4'
+            ],
+            [
+                'codmateria' => '02',
+                'nommateria' => 'Ingles',
+                'cremateria' => '2'
+            ],
+            [
+                'codmateria' => '03',
+                'nommateria' => 'Programacion',
+                'cremateria' => '5'
+            ],
+            [
+                'codmateria' => '04',
+                'nommateria' => 'Base de Datos',
+                'cremateria' => '3'
+            ],
+            [
+                'codmateria' => '05',
+                'nommateria' => 'Redes',
+                'cremateria' => '6'
+            ]
+            ];
+            DB::table('materias')->insert($datos);
     }
 }
