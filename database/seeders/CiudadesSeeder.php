@@ -18,8 +18,29 @@ class CiudadesSeeder extends Seeder
             [
                 'codciudad'=> 'CD001', 
                 'nomciudad'=> 'Pasto',
-                'departamento'=> ''
+                'departamento'=> '01'
             ],
-        ]
+            [
+                'codciudad'=> 'CD002', 
+                'nomciudad'=> 'Popayan',
+                'departamento'=> '02'
+            ],
+            [
+                'codciudad'=> 'CD003', 
+                'nomciudad'=> 'Medellin',
+                'departamento'=> '03'
+            ],
+            [
+                'codciudad'=> 'CD004', 
+                'nomciudad'=> 'Cali',
+                'departamento'=> '04'
+            ],
+            [
+                'codciudad'=> 'CD005', 
+                'nomciudad'=> 'Bogota',
+                'departamento'=> '05'
+            ]
+            ];
+            DB::table('ciudades')->insert($datos);
     }
 }
