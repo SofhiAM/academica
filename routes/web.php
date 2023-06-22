@@ -24,7 +24,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [HomeController::class, 'index']);
-Route::get('/facultades/listado', [Facultades::class, 'index']);
+// Ruta con nombre 
+Route::get('/facultades/listado', [Facultades::class, 'index'])->name('listadoFac');
 
 Route::get('/programas/listado', [Programas::class, 'index']);
 
@@ -34,6 +35,12 @@ Route::get('/profesores/listado', [Profesores::class, 'index']);
 
 Route::get('/regnotas/listado', [Calificaciones::class, 'index']);
 
+Route::get('/facultades/registro',[Facultades::class, 'form_registro']);
+
+Route::post('/facultades/registrar',[Facultades::class, 'registrar']);
+
+// Ruta con parámetro
+Route::get('/facultades/eliminar/{id}',[Facultades::class, 'eliminar'])->name('eliminaFac');
 
 
 
