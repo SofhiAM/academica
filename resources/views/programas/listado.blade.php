@@ -10,7 +10,7 @@
 
 @section('content')
     <p>Listado de Programas</p>
-    <a href="/facultades/registro" class="btn btn-success">Adicionar facultades</a><br><br>
+    <a href="/programas/registro" class="btn btn-success">Adicionar programas</a><br><br>
     <table class="table">
         <thead>
             <tr>

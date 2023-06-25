@@ -17,7 +17,7 @@ class Programas extends Controller
     }
 
     public function form_registro(){
-        return view('programa.registro');
+        return view('programas.registro');
     }
 
     public function registrar(Request $r){
