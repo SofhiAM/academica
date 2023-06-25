@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Estudiante;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Facultades;
@@ -38,6 +39,14 @@ Route::get('/regnotas/listado', [Calificaciones::class, 'index']);
 Route::get('/facultades/registro',[Facultades::class, 'form_registro']);
 
 Route::post('/facultades/registrar',[Facultades::class, 'registrar']);
+
+Route::get('/estudiantes/registro',[Estudiantes::class, 'form_registro']);
+
+Route::post('/estudiantes/registrar',[Estudiantes::class, 'registrar']);
+
+Route::get('/profesores/registro',[Profesores::class, 'form_registro']);
+
+Route::post('/profesores/registrar',[Profesores::class, 'registrar']);
 
 // Ruta con parámetro
 Route::get('/facultades/eliminar/{id}',[Facultades::class, 'eliminar'])->name('eliminaFac');
