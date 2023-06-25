@@ -12,7 +12,18 @@ class Programas extends Controller
 {
     //
     public function index(){
-        $programas = DB::table('programas')->get();
+        $prog = DB::table('programas')->get();
+        $facultades = DB::table('facultades')->get();
+
+        $programas = [];
+        foreach ($prog as $p) {
+            $codigoFacultad = $p->facultad;
+
+            $nomfacultad= $facultades->where('codFacultad', $codigoFacultad)->first()->nomFacultad;
+                        
+            $p->facultad = $nomfacultad;
+            $programas[] = $p;
+        }
         return view('programas.listado', ['programas'=>$programas]);
     }
 
