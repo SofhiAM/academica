@@ -17,11 +17,12 @@ class Programas extends Controller
     }
 
     public function form_registro(){
-        return view('programas.registro');
+        $facultades = DB::table('facultades')->get();
+        return view('programas.registro', ['facultades'=>$facultades]);
     }
 
     public function registrar(Request $r){
-        $programas = new Programas();
+        $programas = new Programa();
 
         $programas->codPrograma = $r->input('codprograma');
         $programas->nomPrograma = $r->input('nomprograma');

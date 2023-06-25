@@ -34,8 +34,8 @@
                 <td>{{$p->nomPrograma}}</td>
                 <td>{{$p->facultad}}</td>
             <td>
-                <a href="{{route('eliminaFac', $p->codPrograma)}}" class="btn btn-primary">Editar</a>
-                <a href="{{route('eliminaFac', $p->codPrograma)}}" class="btn btn-danger">Eliminar</a>
+                <a href="{{route('eliminaProg', $p->codPrograma)}}" class="btn btn-primary">Editar</a>
+                <a href="{{route('eliminaProg', $p->codPrograma)}}" class="btn btn-danger">Eliminar</a>
             </td>
             </tr>
             <tr>

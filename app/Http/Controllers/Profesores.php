@@ -22,9 +22,9 @@ class Profesores extends Controller
     public function registrar(Request $r){
         $profesor = new Profesor();
 
-        $profesor->codproprofesor = $r->input('codprofesor');
-        $profesor->nomproprofesor = $r->input('nomprofesor');
-        $profesor->catproprofesor = $r->input('catprofesor');
+        $profesor->codprofesor = $r->input('codprofesor');
+        $profesor->nomprofesor = $r->input('nomprofesor');
+        $profesor->catprofesor = $r->input('catprofesor');
 
         $profesor->save();
 

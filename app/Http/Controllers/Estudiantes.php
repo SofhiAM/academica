@@ -6,18 +6,28 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-use app\Models\Estudiante;
+use App\Models\Estudiante;
+use App\Models\Ciudad;
+use App\Models\Barrio;
+use App\Models\Programa;
 
 class Estudiantes extends Controller
 {
     
     public function index(){
         $estudiantes = DB::table('estudiantes')->get();
+
+        // Barrio
+        $barrios = DB::table('barrios')->get()
+        $nombarrios = Barrio::where('nombarrio','like',$estudiantes->barrio)->get();
         return view('estudiantes.listado', ['estudiantes'=>$estudiantes]);
     }
 
     public function form_registro(){
-        return view('estudiantes.registro');
+        $ciudades = DB::table('ciudades')->get();
+        $barrios = DB::table('barrios')->get();
+        $programas = DB::table('programas')->get();
+        return view('estudiantes.registro',compact('ciudades', 'barrios', 'programas'));
     }
 
     public function registrar(Request $r){

@@ -16,10 +16,10 @@
                 <div class="col-mb-12 col-mb-9">
                     
                     <label class="form-label">Código</label>
-                    <input type="text" name="codfacultad" id="codfacultad"  class="form-control"><br>
+                    <input type="text" name="codprofesor" id="codprofesor"  class="form-control"><br>
     
                     <label class="form-label">Nombre</label>
-                    <input type="text" name="nomfacultad" id="nomfacultad"  class="form-control"><br>
+                    <input type="text" name="nomprofesor" id="nomprofesor"  class="form-control"><br>
 
                     <label class="form-label">Categoria</label>
                     <input type="text" name="catprofesor" id="catprofesor"  class="form-control"><br>

@@ -17,10 +17,20 @@
                 <div class="col-mb-12 col-mb-9">
                     
                     <label class="form-label">Código</label>
-                    <input type="text" name="codfacultad" id="codfacultad"  class="form-control"><br>
+                    <input type="text" name="codprograma" id="codprograma"  class="form-control"><br>
     
                     <label class="form-label">Nombre</label>
-                    <input type="text" name="nomfacultad" id="nomfacultad"  class="form-control"><br>
+                    <input type="text" name="nomprograma" id="nomprograma"  class="form-control"><br>
+
+                    <div class="input-group mb-6">
+                        <label class="input-group-text" for="inputGroupSelect01">Facultad</label>
+                        <select class="form-select" id="codfacultad" name="codfacultad">
+                            <option selected>Seleccione una facultad</option>
+                            @foreach($facultades as $f)
+                            <option value={{$f->codFacultad}}>{{$f -> nomFacultad}}</option>
+                            @endforeach
+                        </select>
+                    </div><br>
                 </div>
                 <br><button type="submit" class="btn btn-primary">Registrar</button>
             </form>
