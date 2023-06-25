@@ -51,6 +51,10 @@ Route::post('/profesores/registrar',[Profesores::class, 'registrar']);
 // Ruta con parámetro
 Route::get('/facultades/eliminar/{id}',[Facultades::class, 'eliminar'])->name('eliminaFac');
 
+Route::get('/profesores/eliminar/{id}',[Profesores::class, 'eliminar'])->name('eliminaProf');
+
+Route::get('/estudiantes/eliminar/{id}',[Estudiantes::class, 'eliminar'])->name('eliminaEst');
+
 
 
 
