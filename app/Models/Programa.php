@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Programa extends Model
 {
     protected $table = 'programas';
-    protected $primaryKey = 'codprograma';
+    protected $primaryKey = 'codPrograma';
     public $timestamps = true; 
 }

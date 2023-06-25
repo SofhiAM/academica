@@ -17,14 +17,14 @@ class Programas extends Controller
     }
 
     public function form_registro(){
-        return view('profesores.registro');
+        return view('programa.registro');
     }
 
     public function registrar(Request $r){
         $programas = new Programas();
 
-        $programas->codprograma = $r->input('codprograma');
-        $programas->nomprograma = $r->input('nomprograma');
+        $programas->codPrograma = $r->input('codprograma');
+        $programas->nomPrograma = $r->input('nomprograma');
         $programas->facultad = $r->input('codfacultad');
 
         $programas->save();

@@ -45,5 +45,3 @@ Route::get('/facultades/eliminar/{id}',[Facultades::class, 'eliminar'])->name('e
 
 
 
-
-
