@@ -15,12 +15,29 @@ class Estudiantes extends Controller
 {
     
     public function index(){
-        $estudiantes = DB::table('estudiantes')->get();
+        $estu = DB::table('estudiantes')->get();
 
         // Barrio
-        $barrios = DB::table('barrios')->get()
-        $nombarrios = Barrio::where('nombarrio','like',$estudiantes->barrio)->get();
-        return view('estudiantes.listado', ['estudiantes'=>$estudiantes]);
+        $barrios = DB::table('barrios')->get();
+        $ciudades = DB::table('ciudades')->get();
+        $programas = DB::table('programas')->get();
+        $estudiantes=[];
+        foreach ($estu as $e) {
+            $codigoBarrio = $e->barrio;
+            $codigoCiudad = $e->ciudad;
+            $codigoPrograma = $e->programa;
+
+            $nombarrio = $barrios->where('codbarrio', $codigoBarrio)->first()->nombarrio;
+            $nomciudad = $ciudades->where('codciudad', $codigoCiudad)->first()->nomciudad;
+            $nomprograma = $programas->where('codPrograma', $codigoPrograma)->first()->nomPrograma;
+            
+            $e->barrio = $nombarrio;
+            $e->programa = $nomprograma;
+            $e->ciudad = $nomciudad;
+            $estudiantes[] = $e;
+        }
+    
+        return view('estudiantes.listado',['estudiantes'=>$estudiantes]);
     }
 
     public function form_registro(){

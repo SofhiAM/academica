@@ -59,5 +59,9 @@ Route::get('/programas/eliminar/{id}',[Programas::class, 'eliminar'])->name('eli
 Route::get('/profesores/eliminar/{id}',[Profesores::class, 'eliminar'])->name('eliminaProf');
 Route::get('/estudiantes/eliminar/{id}',[Estudiantes::class, 'eliminar'])->name('eliminaEst');
 
+Route::post('/facultades/editar/{id}',[Facultades::class, 'editar']);
+Route::get('/facultades/form_editar/{id}',[Facultades::class, 'form_editar'])->name('editarFac');
+
+
 
 
