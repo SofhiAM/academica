@@ -27,7 +27,7 @@ Route::get('/dashboard', [HomeController::class, 'index']);
 // Ruta con nombre 
 Route::get('/facultades/listado', [Facultades::class, 'index'])->name('listadoFac');
 
-Route::get('/programas/listado', [Programas::class, 'index']);
+Route::get('/programas/listado', [Programas::class, 'index'])->name('listadoProg');
 
 Route::get('/estudiantes/listado', [Estudiantes::class, 'index']);
 
