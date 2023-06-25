@@ -29,9 +29,9 @@ Route::get('/facultades/listado', [Facultades::class, 'index'])->name('listadoFa
 
 Route::get('/programas/listado', [Programas::class, 'index'])->name('listadoProg');
 
-Route::get('/estudiantes/listado', [Estudiantes::class, 'index']);
+Route::get('/estudiantes/listado', [Estudiantes::class, 'index'])->name('listadoEst');
 
-Route::get('/profesores/listado', [Profesores::class, 'index']);
+Route::get('/profesores/listado', [Profesores::class, 'index'])->name('listadoProf');
 
 Route::get('/regnotas/listado', [Calificaciones::class, 'index']);
 
